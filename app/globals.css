@@ -11,24 +11,32 @@
   --card-foreground: oklch(0.15 0.01 260);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 260);
-  --primary: oklch(0.48 0.22 265); /* Vivid sapphire blue */
+  --primary: oklch(0.48 0.22 265);
+  /* Vivid sapphire blue */
   --primary-foreground: oklch(0.98 0.005 80);
   --secondary: oklch(0.92 0.02 280);
   --secondary-foreground: oklch(0.15 0.01 260);
   --muted: oklch(0.96 0.01 280);
   --muted-foreground: oklch(0.48 0.01 260);
-  --accent: oklch(0.68 0.26 40); /* Bright gold accent */
+  --accent: oklch(0.68 0.26 40);
+  /* Bright gold accent */
   --accent-foreground: oklch(0.12 0.02 260);
-  --destructive: oklch(0.55 0.32 25); /* Vibrant ruby red */
+  --destructive: oklch(0.55 0.32 25);
+  /* Vibrant ruby red */
   --destructive-foreground: oklch(0.98 0.005 80);
   --border: oklch(0.88 0.02 280);
   --input: oklch(0.88 0.02 280);
   --ring: oklch(0.48 0.22 265);
-  --chart-1: oklch(0.48 0.22 265); /* Sapphire blue */
-  --chart-2: oklch(0.65 0.26 40); /* Rich gold */
-  --chart-3: oklch(0.52 0.2 160); /* Emerald green */
-  --chart-4: oklch(0.55 0.32 25); /* Ruby red */
-  --chart-5: oklch(0.42 0.18 310); /* Amethyst purple */
+  --chart-1: oklch(0.48 0.22 265);
+  /* Sapphire blue */
+  --chart-2: oklch(0.65 0.26 40);
+  /* Rich gold */
+  --chart-3: oklch(0.52 0.2 160);
+  /* Emerald green */
+  --chart-4: oklch(0.55 0.32 25);
+  /* Ruby red */
+  --chart-5: oklch(0.42 0.18 310);
+  /* Amethyst purple */
   --radius: 0.75rem;
   --sidebar: oklch(0.99 0.005 80);
   --sidebar-foreground: oklch(0.15 0.01 260);
@@ -47,15 +55,18 @@
   --card-foreground: oklch(0.96 0.01 80);
   --popover: oklch(0.15 0.02 260);
   --popover-foreground: oklch(0.96 0.01 80);
-  --primary: oklch(0.62 0.24 265); /* Bright sapphire */
+  --primary: oklch(0.62 0.24 265);
+  /* Bright sapphire */
   --primary-foreground: oklch(0.98 0.005 80);
   --secondary: oklch(0.22 0.02 260);
   --secondary-foreground: oklch(0.96 0.01 80);
   --muted: oklch(0.22 0.02 260);
   --muted-foreground: oklch(0.65 0.01 80);
-  --accent: oklch(0.72 0.28 42); /* Brilliant gold */
+  --accent: oklch(0.72 0.28 42);
+  /* Brilliant gold */
   --accent-foreground: oklch(0.12 0.02 260);
-  --destructive: oklch(0.58 0.34 28); /* Bright ruby */
+  --destructive: oklch(0.58 0.34 28);
+  /* Bright ruby */
   --destructive-foreground: oklch(0.96 0.01 80);
   --border: oklch(0.28 0.02 260);
   --input: oklch(0.28 0.02 260);
@@ -121,6 +132,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground font-sans;
     /* Lato font for all body text - clean, modern, and highly readable */
@@ -282,12 +294,14 @@
 }
 
 @layer utilities {
+
   /* Enhanced animations with more vibrant and dynamic effects */
   @keyframes fade-in-up {
     from {
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -298,6 +312,7 @@
     from {
       opacity: 0;
     }
+
     to {
       opacity: 1;
     }
@@ -308,6 +323,7 @@
       opacity: 0;
       transform: scale(0.9);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -318,6 +334,7 @@
     0% {
       background-position: -1000px 0;
     }
+
     100% {
       background-position: 1000px 0;
     }
@@ -328,6 +345,7 @@
       opacity: 0;
       transform: translateX(-40px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -339,6 +357,7 @@
       opacity: 0;
       transform: translateX(40px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -346,20 +365,24 @@
   }
 
   @keyframes bounce-subtle {
+
     0%,
     100% {
       transform: translateY(0);
     }
+
     50% {
       transform: translateY(-8px);
     }
   }
 
   @keyframes pulse-glow {
+
     0%,
     100% {
       box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
     }
+
     50% {
       box-shadow: 0 0 40px rgba(249, 115, 22, 0.8);
     }
@@ -369,6 +392,7 @@
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
@@ -378,9 +402,11 @@
     0% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
+
     100% {
       background-position: 0% 50%;
     }
