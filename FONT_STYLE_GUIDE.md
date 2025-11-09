@@ -63,18 +63,12 @@ Custom utility classes have been added for easy font application:
 Fonts are loaded via Next.js Google Fonts integration in `app/layout.tsx`:
 
 ```tsx
-import { Lato, Playfair_Display } from "next/font/google"
+import { Nunito } from "next/font/google"
 
-const lato = Lato({
+const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-lato",
-})
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-nunito",
 })
 ```
 
