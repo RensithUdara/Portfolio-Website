@@ -113,13 +113,33 @@ The typography choice aligns with CeyLex Gems' evolved brand values:
 - **Accessible**: Excellent readability across all devices and user needs
 - **Distinctive**: Round characteristics create memorable brand personality
 
+## UI Design Enhancements
+
+### Modern Component Styles
+- **Enhanced Cards**: `.card-enhanced` - Modern shadows and hover effects
+- **Primary Buttons**: `.btn-primary` - Gradient backgrounds with hover animations
+- **Secondary Buttons**: `.btn-secondary` - Clean styling with subtle interactions
+- **Text Effects**: `.text-gradient` and `.text-shadow` for visual emphasis
+
+### Interactive Elements
+- Smooth transitions using cubic-bezier easing
+- Hover effects with subtle transforms and enhanced shadows
+- Focus states with colored rings and smooth transitions
+- Enhanced button padding and border radius for modern feel
+
+### Spacing System
+- **Section Spacing**: `.section-spacing` - 5rem bottom margins for major sections
+- **Content Spacing**: `.content-spacing` - Consistent 1.5rem spacing between elements
+- **Typography Margins**: Automatic bottom margins on all headings and paragraphs
+
 ## Best Practices
 
 1. Always use semantic HTML elements (h1-h6, p) for automatic font application
-2. Use utility classes sparingly - prefer semantic styling
-3. Maintain consistent font weights across similar elements
-4. Ensure sufficient contrast with background colors
-5. Test readability across different screen sizes
+2. Leverage the enhanced spacing system for consistent layouts
+3. Use the modern button and card classes for cohesive UI design
+4. Apply responsive considerations - typography scales on mobile
+5. Maintain visual hierarchy with the enhanced font weight system
+6. Test interactive elements for smooth animations and accessibility
 
 ## File Locations
 
