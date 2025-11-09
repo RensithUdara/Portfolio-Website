@@ -255,7 +255,7 @@
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   }
 
-  /* Increased text sizes for common Tailwind utilities */
+  /* Enhanced text sizes matching new heading hierarchy */
   .text-sm {
     font-size: 1rem;
   }
@@ -265,31 +265,39 @@
   }
 
   .text-lg {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .text-xl {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .text-2xl {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 
   .text-3xl {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .text-4xl {
-    font-size: 2.75rem;
+    font-size: 3.25rem;
   }
 
   .text-5xl {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .text-6xl {
-    font-size: 4.25rem;
+    font-size: 5rem;
+  }
+
+  .text-7xl {
+    font-size: 6rem;
+  }
+
+  .text-8xl {
+    font-size: 7.5rem;
   }
 
   /* Font family utilities for easy application */
