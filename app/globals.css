@@ -316,6 +316,72 @@
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-weight: 600;
   }
+
+  /* Modern UI Design Enhancements */
+  
+  /* Enhanced Card Styles */
+  .card-enhanced {
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+  }
+
+  .card-enhanced:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Modern Button Styles */
+  .btn-primary {
+    background: linear-gradient(135deg, oklch(0.48 0.22 265) 0%, oklch(0.55 0.24 270) 100%);
+    color: oklch(0.98 0.005 80);
+    padding: 0.875rem 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px 0 rgba(0, 118, 255, 0.5);
+  }
+
+  .btn-secondary {
+    background: oklch(0.92 0.02 280);
+    color: oklch(0.15 0.01 260);
+    padding: 0.875rem 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+  }
+
+  .btn-secondary:hover {
+    background: oklch(0.88 0.02 280);
+    transform: translateY(-1px);
+    border-color: oklch(0.48 0.22 265);
+  }
+
+  /* Enhanced Typography Spacing */
+  .section-spacing {
+    margin-bottom: 5rem;
+  }
+
+  .content-spacing > * + * {
+    margin-top: 1.5rem;
+  }
+
+  /* Modern Input Styles */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    ring: 2px solid oklch(0.48 0.22 265);
+    border-color: oklch(0.48 0.22 265);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
 }
 
 @layer utilities {
