@@ -87,8 +87,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
-  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Segoe UI Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -135,8 +135,8 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    /* Lato font for all body text - clean, modern, and highly readable */
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    /* Nunito - Modern round font for all text - friendly, approachable, and highly readable */
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     font-weight: 400;
@@ -152,12 +152,12 @@
   h4,
   h5,
   h6 {
-    @apply font-serif;
-    /* Playfair Display - Classic, elegant serif perfect for luxury and premium brands */
-    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+    @apply font-sans;
+    /* Nunito - Modern round font for headings - friendly, approachable, and contemporary */
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-feature-settings: "liga" 1, "calt" 1;
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
   }
 
   /* Increased heading sizes across the board for better hierarchy */
@@ -192,8 +192,8 @@
   }
 
   p {
-    /* Lato for body text - clean, modern, and highly readable */
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    /* Nunito for body text - modern round font, friendly and highly readable */
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.125rem;
     line-height: 1.8;
     font-weight: 400;
@@ -201,15 +201,15 @@
 
   /* Font styles for interactive elements */
   button {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   input,
   textarea,
   select {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
     font-weight: 400;
   }
@@ -225,17 +225,17 @@
   /* Special styling for navigation and menu items */
   nav,
   .nav-item {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
-    font-weight: 500;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
   }
 
   /* Ensure all text elements inherit proper fonts */
   .text-serif {
-    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   }
 
   .text-sans {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   }
 
   /* Increased text sizes for common Tailwind utilities */
@@ -277,19 +277,19 @@
 
   /* Font family utilities for easy application */
   .font-heading {
-    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
   }
 
   .font-body {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-weight: 400;
   }
 
   .font-nav {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
-    font-weight: 500;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
   }
 }
 

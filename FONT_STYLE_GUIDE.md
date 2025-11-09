@@ -2,88 +2,73 @@
 
 ## Typography Overview
 
-This project uses a carefully selected typography system that reflects the luxury and premium nature of the gemstone business while maintaining excellent readability and modern aesthetics.
+This project uses a modern, friendly typography system with Nunito - a round sans-serif font that creates an approachable, contemporary aesthetic while maintaining excellent readability and professional appearance.
 
-## Primary Fonts
+## Primary Font
 
-### 1. Playfair Display (Headings)
-- **Usage**: All headings (H1-H6), titles, section headers
-- **Character**: Classic, elegant serif font
-- **Purpose**: Perfect for luxury and premium brands
-- **Weight**: 600 (Semi-bold) as default
-- **Letter Spacing**: -0.025em for better readability
-
-### 2. Lato (Body Text)
-- **Usage**: Paragraphs, descriptions, body content, navigation, buttons, forms
-- **Character**: Clean, modern, highly readable sans-serif
-- **Purpose**: Professional appearance with excellent readability
-- **Weight**: 400 (Regular) for body text, 500 (Medium) for navigation and buttons
+### Nunito (Universal)
+- **Usage**: All text elements - headings (H1-H6), body text, navigation, buttons, forms
+- **Character**: Modern, round, friendly sans-serif font
+- **Purpose**: Creates approachable, contemporary brand personality with excellent readability
+- **Weights**: 
+  - 400 (Regular) for body text
+  - 600 (Semi-bold) for navigation and buttons  
+  - 700 (Bold) for headings
+- **Letter Spacing**: -0.015em for headings, normal for body text
 
 ## Font Implementation
 
 ### CSS Variables
 ```css
---font-lato: Lato variable font
---font-playfair: Playfair Display variable font
+--font-nunito: Nunito variable font
 ```
 
 ### Font Weights Available
 
-#### Lato
+#### Nunito
 - Light (300)
-- Regular (400) - Primary body text
-- Bold (700)
-- Black (900)
-
-#### Playfair Display  
-- Regular (400)
+- Regular (400) - Primary body text  
 - Medium (500)
-- Semi-bold (600) - Primary heading weight
-- Bold (700)
+- Semi-bold (600) - Navigation and buttons
+- Bold (700) - Primary heading weight
 - Extra Bold (800)
 - Black (900)
 
 ## Usage Examples
 
 ### Headings
-All headings automatically use Playfair Display with proper sizing and weights.
+All headings automatically use Nunito Bold (700) with optimized spacing for a modern, friendly appearance.
 
 ### Body Text
-All paragraphs, descriptions, and general text use Lato for optimal readability.
+All paragraphs, descriptions, and general text use Nunito Regular (400) for optimal readability and approachable feel.
 
 ### Navigation
-Navigation items use Lato Medium (500) for a professional, clean look.
+Navigation items use Nunito Semi-bold (600) for clear hierarchy and modern aesthetics.
 
 ### Buttons & Forms
-Interactive elements use Lato with appropriate weights for clear action items.
+Interactive elements use Nunito Semi-bold (600) for confident, approachable interaction design.
 
 ## Utility Classes
 
 Custom utility classes have been added for easy font application:
 
-- `.font-heading` - Applies Playfair Display with heading styles
-- `.font-body` - Applies Lato with body text styles  
-- `.font-nav` - Applies Lato Medium for navigation elements
-- `.text-serif` - Forces Playfair Display font family
-- `.text-sans` - Forces Lato font family
+- `.font-heading` - Applies Nunito Bold with heading styles
+- `.font-body` - Applies Nunito Regular with body text styles  
+- `.font-nav` - Applies Nunito Semi-bold for navigation elements
+- `.text-serif` - Forces Nunito font family (updated for consistency)
+- `.text-sans` - Forces Nunito font family
 
 ## Font Loading
 
 Fonts are loaded via Next.js Google Fonts integration in `app/layout.tsx`:
 
 ```tsx
-import { Lato, Playfair_Display } from "next/font/google"
+import { Nunito } from "next/font/google"
 
-const lato = Lato({
+const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-lato",
-})
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-nunito",
 })
 ```
 
