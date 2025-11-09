@@ -37,26 +37,26 @@ This project uses a modern, friendly typography system with Nunito - a round san
 ## Usage Examples
 
 ### Headings
-All headings automatically use Playfair Display with proper sizing and weights.
+All headings automatically use Nunito Bold (700) with optimized spacing for a modern, friendly appearance.
 
 ### Body Text
-All paragraphs, descriptions, and general text use Lato for optimal readability.
+All paragraphs, descriptions, and general text use Nunito Regular (400) for optimal readability and approachable feel.
 
 ### Navigation
-Navigation items use Lato Medium (500) for a professional, clean look.
+Navigation items use Nunito Semi-bold (600) for clear hierarchy and modern aesthetics.
 
 ### Buttons & Forms
-Interactive elements use Lato with appropriate weights for clear action items.
+Interactive elements use Nunito Semi-bold (600) for confident, approachable interaction design.
 
 ## Utility Classes
 
 Custom utility classes have been added for easy font application:
 
-- `.font-heading` - Applies Playfair Display with heading styles
-- `.font-body` - Applies Lato with body text styles  
-- `.font-nav` - Applies Lato Medium for navigation elements
-- `.text-serif` - Forces Playfair Display font family
-- `.text-sans` - Forces Lato font family
+- `.font-heading` - Applies Nunito Bold with heading styles
+- `.font-body` - Applies Nunito Regular with body text styles  
+- `.font-nav` - Applies Nunito Semi-bold for navigation elements
+- `.text-serif` - Forces Nunito font family (updated for consistency)
+- `.text-sans` - Forces Nunito font family
 
 ## Font Loading
 
