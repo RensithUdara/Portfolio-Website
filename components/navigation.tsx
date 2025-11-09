@@ -68,8 +68,8 @@ export function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={`relative text-sm font-semibold transition-all duration-300 hover:scale-105 ${isScrolled
-                    ? "text-gray-700 hover:text-blue-600"
-                    : "text-white/90 hover:text-amber-400"
+                  ? "text-gray-700 hover:text-blue-600"
+                  : "text-white/90 hover:text-amber-400"
                   } group`}
               >
                 {link.label}
@@ -82,11 +82,10 @@ export function Navigation() {
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
             <Button
-              className={`hidden sm:inline-flex rounded-lg px-6 py-2.5 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-                isScrolled
+              className={`hidden sm:inline-flex rounded-lg px-6 py-2.5 text-sm font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${isScrolled
                   ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
                   : "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black"
-              }`}
+                }`}
               asChild
             >
               <Link href="/shop">Explore Collection</Link>
@@ -96,11 +95,10 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="icon"
-              className={`md:hidden transition-colors duration-300 ${
-                isScrolled 
-                  ? "text-gray-700 hover:bg-gray-100" 
+              className={`md:hidden transition-colors duration-300 ${isScrolled
+                  ? "text-gray-700 hover:bg-gray-100"
                   : "text-white hover:bg-white/10"
-              }`}
+                }`}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -109,38 +107,34 @@ export function Navigation() {
           </div>
         </div>
 
-                {/* Mobile Menu */}
+        {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className={`md:hidden transition-all duration-300 border-t backdrop-blur-xl ${
-            isScrolled 
-              ? "bg-white/95 border-gray-200" 
+          <div className={`md:hidden transition-all duration-300 border-t backdrop-blur-xl ${isScrolled
+              ? "bg-white/95 border-gray-200"
               : "bg-white/10 border-white/10"
-          }`}>
+            }`}>
             <div className="container mx-auto px-4 py-6">
               <div className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-lg hover:scale-105 ${
-                      isScrolled
+                    className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-lg hover:scale-105 ${isScrolled
                         ? "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                         : "text-white hover:text-amber-400 hover:bg-white/10"
-                    }`}
+                      }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <div className={`mt-4 border-t pt-4 ${
-                  isScrolled ? "border-gray-200" : "border-white/10"
-                }`}>
+                <div className={`mt-4 border-t pt-4 ${isScrolled ? "border-gray-200" : "border-white/10"
+                  }`}>
                   <Button
-                    className={`w-full py-3 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${
-                      isScrolled
+                    className={`w-full py-3 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 ${isScrolled
                         ? "bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white"
                         : "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black"
-                    }`}
+                      }`}
                     asChild
                   >
                     <Link href="/shop" onClick={() => setMobileMenuOpen(false)}>
