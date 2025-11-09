@@ -27,8 +27,8 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 z-50 w-full transition-all duration-500 ${isScrolled
-          ? "bg-white/95 shadow-xl backdrop-blur-xl border-b border-gray-100"
-          : "bg-white/10 backdrop-blur-lg"
+        ? "bg-white/95 shadow-xl backdrop-blur-xl border-b border-gray-100"
+        : "bg-white/10 backdrop-blur-lg"
         }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,16 +67,14 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-sm font-semibold transition-all duration-300 hover:scale-105 ${
-                  isScrolled 
-                    ? "text-gray-700 hover:text-blue-600" 
+                className={`relative text-sm font-semibold transition-all duration-300 hover:scale-105 ${isScrolled
+                    ? "text-gray-700 hover:text-blue-600"
                     : "text-white/90 hover:text-amber-400"
-                } group`}
+                  } group`}
               >
                 {link.label}
-                <span className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full ${
-                  isScrolled ? "bg-blue-600" : "bg-amber-400"
-                }`}></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full ${isScrolled ? "bg-blue-600" : "bg-amber-400"
+                  }`}></span>
               </Link>
             ))}
           </div>
