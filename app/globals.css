@@ -11,42 +11,47 @@
   --card-foreground: 12 16 35;
   --popover: 255 255 255;
   --popover-foreground: 12 16 35;
-  
+
   /* Primary - Deep Sapphire Blue */
   --primary: 20 66 142;
   --primary-foreground: 248 250 252;
-  
+
   /* Secondary - Sophisticated Gray */
   --secondary: 241 245 249;
   --secondary-foreground: 51 65 85;
-  
+
   /* Muted tones */
   --muted: 248 250 252;
   --muted-foreground: 100 116 139;
-  
+
   /* Accent - Luxurious Gold */
   --accent: 234 179 8;
   --accent-foreground: 12 16 35;
-  
+
   /* Destructive - Ruby Red */
   --destructive: 220 38 38;
   --destructive-foreground: 248 250 252;
-  
+
   /* Borders and inputs */
   --border: 226 232 240;
   --input: 226 232 240;
   --ring: 20 66 142;
-  
+
   /* Chart colors - Premium gemstone palette */
-  --chart-1: 20 66 142;      /* Sapphire Blue */
-  --chart-2: 234 179 8;      /* Gold */
-  --chart-3: 21 128 61;      /* Emerald Green */
-  --chart-4: 220 38 38;      /* Ruby Red */
-  --chart-5: 147 51 234;     /* Amethyst Purple */
-  
+  --chart-1: 20 66 142;
+  /* Sapphire Blue */
+  --chart-2: 234 179 8;
+  /* Gold */
+  --chart-3: 21 128 61;
+  /* Emerald Green */
+  --chart-4: 220 38 38;
+  /* Ruby Red */
+  --chart-5: 147 51 234;
+  /* Amethyst Purple */
+
   /* Border radius for modern look */
   --radius: 12px;
-  
+
   /* Sidebar colors */
   --sidebar: 255 255 255;
   --sidebar-foreground: 12 16 35;
@@ -56,7 +61,7 @@
   --sidebar-accent-foreground: 51 65 85;
   --sidebar-border: 226 232 240;
   --sidebar-ring: 20 66 142;
-  
+
   /* Custom gradient variables */
   --gradient-primary: linear-gradient(135deg, rgb(20 66 142) 0%, rgb(37 99 235) 100%);
   --gradient-accent: linear-gradient(135deg, rgb(234 179 8) 0%, rgb(251 191 36) 100%);
@@ -162,7 +167,12 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-sans;
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-feature-settings: "liga" 1, "calt" 1;
@@ -430,6 +440,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -441,6 +452,7 @@
       opacity: 0;
       transform: scale(0.9);
     }
+
     to {
       opacity: 1;
       transform: scale(1);
@@ -451,6 +463,7 @@
     0% {
       background-position: -200px 0;
     }
+
     100% {
       background-position: calc(200px + 100%) 0;
     }
@@ -466,12 +479,10 @@
 
   .animate-shimmer {
     animation: shimmer 2s infinite linear;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
     background-size: 200px 100%;
   }
 
@@ -483,59 +494,59 @@
   }
 }
 
-  /* Responsive Typography - Mobile Optimizations */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem;
-      line-height: 1.15;
-    }
-
-    h2 {
-      font-size: 2.5rem;
-      line-height: 1.25;
-    }
-
-    h3 {
-      font-size: 2rem;
-      line-height: 1.3;
-    }
-
-    h4 {
-      font-size: 1.75rem;
-      line-height: 1.35;
-    }
-
-    h5 {
-      font-size: 1.5rem;
-      line-height: 1.4;
-    }
-
-    h6 {
-      font-size: 1.25rem;
-      line-height: 1.45;
-    }
-
-    body {
-      font-size: 16px;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.7;
-    }
+/* Responsive Typography - Mobile Optimizations */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1.15;
   }
 
-  /* Enhanced Visual Hierarchy */
-  .text-gradient {
-    background: linear-gradient(135deg, oklch(0.48 0.22 265), oklch(0.68 0.26 40));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
   }
 
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  h3 {
+    font-size: 2rem;
+    line-height: 1.3;
   }
+
+  h4 {
+    font-size: 1.75rem;
+    line-height: 1.35;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+    line-height: 1.45;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Enhanced Visual Hierarchy */
+.text-gradient {
+  background: linear-gradient(135deg, oklch(0.48 0.22 265), oklch(0.68 0.26 40));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 }
 
 @layer utilities {
