@@ -263,241 +263,73 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-          }}
-        />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1a2557] via-transparent to-transparent" />
-
-      <div className="container relative mx-auto px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="space-y-6 text-white animate-fade-in-up">
-            <Badge className="w-fit border-amber-400 bg-amber-500 text-black hover:bg-amber-500 transition-transform hover:scale-105">
-              Certified & Ethically Sourced
-            </Badge>
-            <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              Authentic Sri Lankan <span className="text-emerald-400">Certified Gems</span>
-            </h1>
-            <p className="text-lg leading-relaxed text-white/90 text-pretty">
-              From the legendary mines of Ratnapura to your collection. Discover hand-picked Ceylon sapphires, rubies,
-              moonstones, and rare gems with full lab certification and transparent pricing.
+      {/* Call to Action Section */}
+      <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Find Your Perfect Gemstone?
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Our expert gemologists are here to help you discover the perfect Ceylon gemstone for your collection or custom jewelry project.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="gap-2 bg-amber-500 text-black hover:bg-amber-600 transition-all hover:scale-105 hover:shadow-xl"
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
                 asChild
               >
                 <Link href="/shop">
-                  <Gem className="h-5 w-5" />
-                  Browse Collection <ArrowRight className="h-4 w-4" />
+                  Browse Our Collection <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-2 border-white/30 bg-white/10 text-white hover:bg-white/20 transition-all hover:scale-105"
+              
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg"
                 asChild
               >
                 <Link href="/contact">
-                  <MessageCircle className="h-5 w-5" />
-                  Request Consultation
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Get Expert Advice
                 </Link>
               </Button>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-6 pt-4">
-              <div
-                className="flex items-center gap-2 animate-fade-in"
-                style={{ animationDelay: "0.2s", animationFillMode: "both" }}
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 transition-transform hover:scale-110">
-                  <Check className="h-5 w-5 text-emerald-400" />
+            {/* Contact Information */}
+            <div className="pt-12 border-t border-white/10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-blue-400 mr-3" />
+                    <span className="text-white font-medium">Call Us</span>
+                  </div>
+                  <p className="text-slate-300">+94 91 438 3324</p>
                 </div>
-                <span className="text-sm font-medium">Lab Certified</span>
-              </div>
-              <div
-                className="flex items-center gap-2 animate-fade-in"
-                style={{ animationDelay: "0.4s", animationFillMode: "both" }}
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 transition-transform hover:scale-110">
-                  <Globe2 className="h-5 w-5 text-emerald-400" />
+                
+                <div className="space-y-2">
+                  <div className="flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-blue-400 mr-3" />
+                    <span className="text-white font-medium">Email Us</span>
+                  </div>
+                  <p className="text-slate-300">info@ceylexgems.com</p>
                 </div>
-                <span className="text-sm font-medium">Worldwide Shipping</span>
-              </div>
-              <div
-                className="flex items-center gap-2 animate-fade-in"
-                style={{ animationDelay: "0.6s", animationFillMode: "both" }}
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 transition-transform hover:scale-110">
-                  <Leaf className="h-5 w-5 text-emerald-400" />
+                
+                <div className="space-y-2">
+                  <div className="flex items-center justify-center">
+                    <MessageCircle className="h-6 w-6 text-blue-400 mr-3" />
+                    <span className="text-white font-medium">WhatsApp</span>
+                  </div>
+                  <p className="text-slate-300">+94 77 123 4567</p>
                 </div>
-                <span className="text-sm font-medium">Ethical Sourcing</span>
               </div>
-            </div>
-          </div>
-
-          <div className="relative animate-scale-in">
-            <div className="aspect-square overflow-hidden rounded-2xl bg-white/10 p-8 backdrop-blur-sm transition-transform hover:scale-105">
-              <Image
-                src="/collection-of-vibrant-colorful-gemstones-sapphire-.jpg"
-                alt="Premium Ceylon gemstones collection"
-                width={600}
-                height={600}
-                className="h-full w-full object-contain"
-                priority
-              />
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-      {/* Why Choose CEYLEX GEMS - Light Background */ }
-  <section className="bg-gradient-to-br from-purple-50 to-blue-50 py-28">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mb-16 text-center animate-fade-in-up">
-        <h2 className="mb-6 font-serif text-5xl font-bold tracking-tight text-balance text-gray-900 sm:text-6xl">
-          Why Choose CEYLEX GEMS?
-        </h2>
-        <p className="mx-auto max-w-3xl text-xl text-gray-600 text-pretty">
-          Experience the heritage of Sri Lanka's gem industry with modern transparency, certification, and worldwide
-          delivery.
-        </p>
-      </div>
-
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-        <Card className="border-0 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <CardContent className="p-8">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 transition-transform hover:scale-110">
-              <Award className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="mb-3 text-2xl font-bold text-gray-900">Lab Certified</h3>
-            <p className="text-base leading-relaxed text-gray-600">
-              Every gemstone comes with authentic laboratory certification, ensuring quality and authenticity you
-              can trust.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <CardContent className="p-8">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 transition-transform hover:scale-110">
-              <Leaf className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="mb-3 text-2xl font-bold text-gray-900">Ethical Sourcing</h3>
-            <p className="text-base leading-relaxed text-gray-600">
-              Responsibly sourced from Sri Lanka's renowned mines in Ratnapura and Eheliyagoda with sustainable
-              practices.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <CardContent className="p-8">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 transition-transform hover:scale-110">
-              <Tag className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="mb-3 text-2xl font-bold text-gray-900">Transparent Pricing</h3>
-            <p className="text-base leading-relaxed text-gray-600">
-              Fair, honest pricing with no hidden costs. Direct from source to you, eliminating unnecessary markups.
-            </p>
-          </CardContent>
-        </Card>
-
-        <Card className="border-0 bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-          <CardContent className="p-8">
-            <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 transition-transform hover:scale-110">
-              <Globe2 className="h-8 w-8 text-white" />
-            </div>
-            <h3 className="mb-3 text-2xl font-bold text-gray-900">Worldwide Delivery</h3>
-            <p className="text-base leading-relaxed text-gray-600">
-              Secure, export-ready shipping to collectors and jewelers worldwide with full documentation and
-              tracking.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Statistics Banner */}
-      <div className="mt-16 overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-purple-600 to-purple-700 p-12 shadow-2xl relative">
-        <div className="absolute inset-0 animate-shimmer" />
-        <div className="relative grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="text-center text-white">
-            <div className="mb-3 font-serif text-6xl font-bold">20+</div>
-            <div className="text-lg text-white/90">Years Experience</div>
-          </div>
-          <div className="text-center text-white">
-            <div className="mb-3 font-serif text-6xl font-bold">100%</div>
-            <div className="text-lg text-white/90">Certified Gems</div>
-          </div>
-          <div className="text-center text-white">
-            <div className="mb-3 font-serif text-6xl font-bold">50+</div>
-            <div className="text-lg text-white/90">Countries Served</div>
-          </div>
-          <div className="text-center text-white">
-            <div className="mb-3 font-serif text-6xl font-bold">5000+</div>
-            <div className="text-lg text-white/90">Happy Customers</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* Gemstone Categories */ }
-  <section className="bg-white py-20">
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="mb-12 text-center animate-fade-in-up">
-        <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-balance text-gray-900 sm:text-4xl">
-          Discover Our Exquisite Gemstones
-        </h2>
-        <p className="mx-auto max-w-2xl text-lg text-gray-600 text-pretty animate-fade-in-up">
-          Each stone is hand-selected from Sri Lanka's legendary mines, certified for authenticity, and ready to
-          become part of your collection or custom jewelry piece.
-        </p>
-      </div>
-
-      <div className="grid gap-8 lg:grid-cols-3">
-        {gemstoneCategories.map((category, index) => (
-          <Card
-            key={category.id}
-            /* Added staggered animation and enhanced hover effect */
-            className="group overflow-hidden border-0 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
-            style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
-          >
-            <CardContent className="p-0">
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src={category.image || "/placeholder.svg"}
-                  alt={category.name}
-                  width={400}
-                  height={400}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                {category.certified && (
-                  <Badge className="absolute right-4 top-4 border-emerald-500 bg-emerald-500 text-white transition-transform group-hover:scale-110">
-                    <Check className="mr-1 h-3 w-3" />
-                    Certified
-                  </Badge>
-                )}
-              </div>
-              <div className="p-6">
-                <h3 className="mb-3 font-serif text-2xl font-bold text-gray-900">{category.name}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-gray-600">{category.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-semibold text-gray-900">{category.price}</span>
-                  <Button
-                    className="gap-2 bg-amber-500 text-black hover:bg-amber-600 transition-all hover:scale-105"
-                    asChild
-                  >
-                    <Link href="/shop">
-                      View Collection <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
+      </section>
             </CardContent>
           </Card>
         ))}
