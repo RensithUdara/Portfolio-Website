@@ -87,8 +87,8 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
-  --font-serif: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   --font-mono: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Segoe UI Mono", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -135,8 +135,8 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    /* Lato font for all body text - clean, modern, and highly readable */
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    /* Nunito - Modern round font for all text - friendly, approachable, and highly readable */
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 18px;
     line-height: 1.7;
     font-weight: 400;
