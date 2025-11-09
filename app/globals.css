@@ -382,6 +382,60 @@
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Responsive Typography - Mobile Optimizations */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-size: 1.75rem;
+      line-height: 1.35;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    h6 {
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  }
+
+  /* Enhanced Visual Hierarchy */
+  .text-gradient {
+    background: linear-gradient(135deg, oklch(0.48 0.22 265), oklch(0.68 0.26 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @layer utilities {
