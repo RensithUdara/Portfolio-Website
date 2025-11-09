@@ -60,39 +60,46 @@ export default function ServicesPage() {
     <div className="min-h-screen">
       <Navigation />
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-background py-20 animate-fade-in">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="space-y-6 animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 rounded-full bg-amber-100 px-4 py-2 transition-transform hover:scale-105">
-                <Sparkles className="h-4 w-4 text-amber-600" />
-                <span className="text-sm font-semibold text-amber-700">Custom Jewellery Services</span>
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-100 via-blue-100 to-pink-100 py-24 animate-fade-in">
+        <div className="absolute inset-0 bg-[url('/jewelry-pattern.jpg')] opacity-5" />
+
+        <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            <div className="space-y-8 animate-fade-in-up">
+              <div className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 px-6 py-3 shadow-lg transition-transform hover:scale-105">
+                <Sparkles className="h-5 w-5 text-white" />
+                <span className="text-base font-bold text-white">Custom Jewellery Services</span>
               </div>
-              <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-balance text-gray-900 sm:text-5xl lg:text-6xl">
-                Transform Your Gemstone Into Art
+              <h1 className="font-serif text-5xl font-bold leading-tight tracking-tight text-balance text-gray-900 sm:text-6xl lg:text-7xl">
+                Transform Your Vision Into{" "}
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Timeless Jewelry
+                </span>
               </h1>
-              <p className="text-lg text-gray-600 leading-relaxed text-pretty">
-                Our custom jewellery service brings your vision to life. From engagement rings to statement pieces, we
-                craft bespoke designs that showcase the unique beauty of your chosen gemstone.
+              <p className="text-xl text-gray-700 leading-relaxed text-pretty">
+                From selecting the perfect loose stone to creating your dream piece, our expert artisans bring your
+                vision to life. We offer custom design, resizing, repairs, and complete jewellery creation services.
               </p>
               <Button
                 size="lg"
-                className="gap-2 bg-amber-500 text-black hover:bg-amber-600 transition-all hover:scale-105"
+                className="h-16 gap-3 bg-gradient-to-r from-amber-500 to-orange-500 px-8 text-lg font-bold text-white shadow-xl hover:from-amber-600 hover:to-orange-600 transition-all hover:scale-105"
                 asChild
               >
                 <Link href="#request-form">
-                  Request a Design <ArrowRight className="h-4 w-4" />
+                  <Sparkles className="h-5 w-5" />
+                  Request a Design <ArrowRight className="h-5 w-5" />
                 </Link>
               </Button>
             </div>
 
             <div className="relative animate-scale-in">
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-3xl opacity-30 animate-pulse-slow" />
               <Image
                 src="/luxury-custom-gemstone-jewelry-design.jpg"
                 alt="Custom jewellery design"
                 width={600}
                 height={600}
-                className="rounded-2xl shadow-2xl transition-transform hover:scale-105"
+                className="relative rounded-3xl shadow-2xl transition-transform hover:scale-105"
               />
             </div>
           </div>
