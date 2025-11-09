@@ -61,15 +61,22 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* Desktop Navigation - Centered navigation links */}
+          {/* Desktop Navigation - Modern styling */}
           <div className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white transition-all hover:text-amber-400"
+                className={`relative text-sm font-semibold transition-all duration-300 hover:scale-105 ${
+                  isScrolled 
+                    ? "text-gray-700 hover:text-blue-600" 
+                    : "text-white/90 hover:text-amber-400"
+                } group`}
               >
                 {link.label}
+                <span className={`absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 group-hover:w-full ${
+                  isScrolled ? "bg-blue-600" : "bg-amber-400"
+                }`}></span>
               </Link>
             ))}
           </div>
