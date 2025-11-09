@@ -26,20 +26,41 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-[#0f1729]/95 shadow-lg backdrop-blur-md" : "bg-[#0f1729]/80 backdrop-blur-sm"
+      className={`fixed top-0 z-50 w-full transition-all duration-500 ${
+        isScrolled 
+          ? "bg-white/95 shadow-xl backdrop-blur-xl border-b border-gray-100" 
+          : "bg-white/10 backdrop-blur-lg"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 transition-transform hover:scale-105">
+          <Link href="/" className="flex items-center gap-3 transition-all duration-300 hover:scale-105">
             <div className="flex h-12 w-12 items-center justify-center">
               <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 2L6 12V28L20 38L34 28V12L20 2Z" stroke="#F59E0B" strokeWidth="2" fill="none" />
-                <path d="M20 12L12 17V27L20 32L28 27V17L20 12Z" stroke="#F59E0B" strokeWidth="2" fill="none" />
+                <path 
+                  d="M20 2L6 12V28L20 38L34 28V12L20 2Z" 
+                  stroke={isScrolled ? "#1e40af" : "#f59e0b"} 
+                  strokeWidth="2" 
+                  fill="none"
+                  className="transition-colors duration-300" 
+                />
+                <path 
+                  d="M20 12L12 17V27L20 32L28 27V17L20 12Z" 
+                  stroke={isScrolled ? "#1e40af" : "#f59e0b"} 
+                  strokeWidth="2" 
+                  fill="none"
+                  className="transition-colors duration-300" 
+                />
               </svg>
             </div>
+            <span 
+              className={`text-xl font-bold transition-colors duration-300 ${
+                isScrolled ? "text-gray-900" : "text-white"
+              }`}
+            >
+              CeyLex Gems
+            </span>
           </Link>
 
           {/* Desktop Navigation - Centered navigation links */}
