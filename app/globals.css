@@ -152,12 +152,12 @@
   h4,
   h5,
   h6 {
-    @apply font-serif;
-    /* Playfair Display - Classic, elegant serif perfect for luxury and premium brands */
-    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+    @apply font-sans;
+    /* Nunito - Modern round font for headings - friendly, approachable, and contemporary */
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-feature-settings: "liga" 1, "calt" 1;
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    font-weight: 700;
+    letter-spacing: -0.015em;
   }
 
   /* Increased heading sizes across the board for better hierarchy */
