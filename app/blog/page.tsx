@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowRight } from "lucide-react"
+import { Calendar, Clock, ArrowRight, Lightbulb } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -77,28 +77,44 @@ export default function BlogPage() {
     <div className="min-h-screen">
       <Navigation />
 
-      <section className="border-b border-border bg-gradient-to-br from-purple-50 via-blue-50 to-background py-20 animate-fade-in">
+      <section className="mt-20 border-b border-border bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-24 animate-fade-in">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <Badge className="mb-4 border-amber-500 bg-amber-50 text-amber-700 transition-transform hover:scale-105">
-              <span className="mr-1">💡</span> Knowledge Center
+          <div className="mx-auto max-w-4xl text-center animate-fade-in-up">
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 shadow-2xl animate-pulse-slow">
+              <Lightbulb className="h-10 w-10 text-white" />
+            </div>
+            <Badge className="mb-6 border-0 bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-2 text-base text-white shadow-lg transition-transform hover:scale-105">
+              Knowledge Center
             </Badge>
-            <h1 className="mb-4 font-serif text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl">
-              Learning Center
+            <h1 className="mb-6 font-serif text-5xl font-bold tracking-tight text-balance text-gray-900 sm:text-6xl">
+              Your Guide to{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Ceylon Gemstones
+              </span>
             </h1>
-            <p className="text-lg text-gray-600 leading-relaxed text-pretty">
-              Educational articles about gemstones, certification, Sri Lankan gem heritage, and expert buying advice.
+            <p className="text-xl text-gray-700 leading-relaxed text-pretty">
+              From understanding certifications to making informed investments, explore our educational resources
+              designed to help you navigate the world of Sri Lankan gemstones.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Categories */}
-      <section className="border-b border-border bg-muted/30 py-6">
+      <section className="border-b border-border bg-white py-8">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <Button key={category} variant={category === "All" ? "default" : "outline"} size="sm">
+          <div className="flex flex-wrap justify-center gap-3 animate-fade-in">
+            {categories.map((category, index) => (
+              <Button
+                key={category}
+                variant={category === "All" ? "default" : "outline"}
+                size="lg"
+                className={
+                  category === "All"
+                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                    : "hover:border-blue-500 hover:text-blue-700 transition-all"
+                }
+                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
+              >
                 {category}
               </Button>
             ))}
@@ -106,13 +122,14 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Featured Article */}
-      <section className="py-12">
+      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <Badge variant="outline" className="mb-4 border-primary text-primary">
-            Featured Article
-          </Badge>
-          <Card className="overflow-hidden">
+          <div className="mb-8 animate-fade-in-up">
+            <Badge className="border-0 bg-gradient-to-r from-amber-500 to-orange-500 px-4 py-2 text-white shadow-lg">
+              ⭐ Featured Article
+            </Badge>
+          </div>
+          <Card className="overflow-hidden border-0 shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-3xl animate-scale-in">
             <div className="grid lg:grid-cols-2">
               <div className="aspect-[4/3] overflow-hidden lg:aspect-auto">
                 <Image
@@ -120,28 +137,38 @@ export default function BlogPage() {
                   alt={articles[0].title}
                   width={600}
                   height={400}
-                  className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+                  className="h-full w-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <CardContent className="flex flex-col justify-center p-8 lg:p-12">
-                <Badge variant="secondary" className="mb-3 w-fit">
+              <CardContent className="flex flex-col justify-center bg-gradient-to-br from-white to-blue-50/30 p-8 lg:p-12">
+                <Badge className="mb-4 w-fit border-0 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md">
                   {articles[0].category}
                 </Badge>
-                <h2 className="mb-4 font-serif text-3xl font-bold tracking-tight text-balance">{articles[0].title}</h2>
-                <p className="mb-6 text-muted-foreground leading-relaxed">{articles[0].excerpt}</p>
-                <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>{articles[0].date}</span>
+                <h2 className="mb-6 font-serif text-4xl font-bold tracking-tight text-balance text-gray-900">
+                  {articles[0].title}
+                </h2>
+                <p className="mb-8 text-lg text-gray-600 leading-relaxed">{articles[0].excerpt}</p>
+                <div className="mb-8 flex flex-wrap items-center gap-6 text-sm text-gray-500">
+                  <div className="flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100">
+                      <Calendar className="h-4 w-4 text-blue-600" />
+                    </div>
+                    <span className="font-medium">{articles[0].date}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>{articles[0].readTime}</span>
+                  <div className="flex items-center gap-2">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-100">
+                      <Clock className="h-4 w-4 text-purple-600" />
+                    </div>
+                    <span className="font-medium">{articles[0].readTime}</span>
                   </div>
                 </div>
-                <Button className="w-fit gap-2" asChild>
+                <Button
+                  size="lg"
+                  className="w-fit gap-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
+                  asChild
+                >
                   <Link href={`/blog/${articles[0].id}`}>
-                    Read Article <ArrowRight className="h-4 w-4" />
+                    Read Full Article <ArrowRight className="h-5 w-5" />
                   </Link>
                 </Button>
               </CardContent>
@@ -150,16 +177,20 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Articles Grid */}
-      <section className="pb-20">
+      <section className="bg-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <h2 className="font-serif text-2xl font-bold">Recent Articles</h2>
+          <div className="mb-12 animate-fade-in-up">
+            <h2 className="mb-4 font-serif text-4xl font-bold text-gray-900">Recent Articles</h2>
+            <p className="text-lg text-gray-600">Expand your knowledge of Ceylon gemstones with our expert guides</p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {articles.slice(1).map((article) => (
-              <Card key={article.id} className="group overflow-hidden">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {articles.slice(1).map((article, index) => (
+              <Card
+                key={article.id}
+                className="group overflow-hidden border-0 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up"
+                style={{ animationDelay: `${index * 0.1}s`, animationFillMode: "both" }}
+              >
                 <CardContent className="p-0">
                   <div className="aspect-video overflow-hidden">
                     <Image
@@ -167,30 +198,35 @@ export default function BlogPage() {
                       alt={article.title}
                       width={600}
                       height={400}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                   <div className="p-6">
-                    <Badge variant="secondary" className="mb-3">
+                    <Badge className="mb-4 border-0 bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-md">
                       {article.category}
                     </Badge>
-                    <h3 className="mb-3 font-serif text-xl font-semibold leading-tight text-balance">
+                    <h3 className="mb-4 font-serif text-2xl font-bold leading-tight text-balance text-gray-900 group-hover:text-blue-600 transition-colors">
                       {article.title}
                     </h3>
-                    <p className="mb-4 text-sm text-muted-foreground leading-relaxed">{article.excerpt}</p>
-                    <div className="mb-4 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3" />
+                    <p className="mb-6 text-base text-gray-600 leading-relaxed">{article.excerpt}</p>
+                    <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4" />
                         <span>{article.date}</span>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4" />
                         <span>{article.readTime}</span>
                       </div>
                     </div>
-                    <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="w-full gap-2 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700 transition-all bg-transparent"
+                      asChild
+                    >
                       <Link href={`/blog/${article.id}`}>
-                        Read More <ArrowRight className="h-3 w-3" />
+                        Read Article <ArrowRight className="h-4 w-4" />
                       </Link>
                     </Button>
                   </div>
@@ -199,8 +235,15 @@ export default function BlogPage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <Button variant="outline" size="lg">
+          <div
+            className="mt-16 text-center animate-fade-in-up"
+            style={{ animationDelay: "0.6s", animationFillMode: "both" }}
+          >
+            <Button
+              size="lg"
+              variant="outline"
+              className="px-8 hover:bg-blue-50 hover:border-blue-500 hover:text-blue-700 transition-all bg-transparent"
+            >
               Load More Articles
             </Button>
           </div>
