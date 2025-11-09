@@ -192,8 +192,8 @@
   }
 
   p {
-    /* Lato for body text - clean, modern, and highly readable */
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    /* Nunito for body text - modern round font, friendly and highly readable */
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.125rem;
     line-height: 1.8;
     font-weight: 400;
@@ -201,15 +201,15 @@
 
   /* Font styles for interactive elements */
   button {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   input,
   textarea,
   select {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
     font-weight: 400;
   }
