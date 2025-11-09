@@ -74,36 +74,72 @@ const nunito = Nunito({
 
 ## Typography Hierarchy
 
-### Font Sizes (Enhanced for Better Readability)
-- **H1**: 3.5rem (56px) - Main page titles
-- **H2**: 2.75rem (44px) - Section headers  
-- **H3**: 2.25rem (36px) - Subsection titles
-- **H4**: 1.75rem (28px) - Card titles
-- **H5**: 1.375rem (22px) - Minor headings
-- **H6**: 1.125rem (18px) - Small headings
-- **Body**: 1.125rem (18px) - Improved from default 16px
+### Font Sizes (Significantly Enhanced for Impact and Readability)
+- **H1**: 4.5rem (72px) - Hero titles with maximum impact
+- **H2**: 3.5rem (56px) - Major section headers  
+- **H3**: 2.75rem (44px) - Subsection titles
+- **H4**: 2.25rem (36px) - Card and content titles
+- **H5**: 1.75rem (28px) - Minor headings
+- **H6**: 1.375rem (22px) - Small headings
+- **Body**: 1.125rem (18px) - Optimized for readability
 - **Small**: 1rem (16px) - Supporting text
 
-### Line Heights
-- **Headings**: 1.2-1.5 (tighter for better proportion)
-- **Body Text**: 1.7-1.8 (generous for readability)
+### Font Weights
+- **H1**: 800 (Extra Bold) - Maximum visual impact
+- **H2-H3**: 700 (Bold) - Strong section hierarchy
+- **H4-H6**: 600 (Semi-bold) - Clear but approachable
+- **Body**: 400 (Regular) - Optimal readability
+- **Navigation/Buttons**: 600 (Semi-bold) - Clear interaction cues
+
+### Line Heights & Spacing
+- **H1**: 1.1 (tight for impact) + 1.5rem bottom margin
+- **H2**: 1.2 (balanced) + 1.25rem bottom margin
+- **H3**: 1.25 (readable) + 1rem bottom margin
+- **H4-H6**: 1.3-1.45 (comfortable) + proportional margins
+- **Body Text**: 1.8 (generous for readability) + 1.25rem bottom margin
+
+### Responsive Behavior
+- Mobile devices automatically scale down headings for optimal viewing
+- H1 reduces to 3rem (48px) on mobile
+- Body text reduces to 1rem (16px) on mobile for better mobile readability
 
 ## Brand Alignment
 
-The typography choices align with CeyLex Gems' brand values:
+The typography choice aligns with CeyLex Gems' evolved brand values:
 
-- **Luxury**: Playfair Display conveys elegance and premium quality
-- **Trust**: Lato provides professional, reliable readability
-- **Heritage**: Serif headings honor traditional gemstone craftsmanship
-- **Modern**: Sans-serif body text ensures contemporary accessibility
+- **Approachable**: Nunito's round letterforms create a friendly, welcoming impression
+- **Modern**: Contemporary sans-serif design appeals to current aesthetic trends
+- **Trustworthy**: Clear, readable typography builds confidence and reliability
+- **Accessible**: Excellent readability across all devices and user needs
+- **Distinctive**: Round characteristics create memorable brand personality
+
+## UI Design Enhancements
+
+### Modern Component Styles
+- **Enhanced Cards**: `.card-enhanced` - Modern shadows and hover effects
+- **Primary Buttons**: `.btn-primary` - Gradient backgrounds with hover animations
+- **Secondary Buttons**: `.btn-secondary` - Clean styling with subtle interactions
+- **Text Effects**: `.text-gradient` and `.text-shadow` for visual emphasis
+
+### Interactive Elements
+- Smooth transitions using cubic-bezier easing
+- Hover effects with subtle transforms and enhanced shadows
+- Focus states with colored rings and smooth transitions
+- Enhanced button padding and border radius for modern feel
+
+### Spacing System
+- **Section Spacing**: `.section-spacing` - 5rem bottom margins for major sections
+- **Content Spacing**: `.content-spacing` - Consistent 1.5rem spacing between elements
+- **Typography Margins**: Automatic bottom margins on all headings and paragraphs
 
 ## Best Practices
 
 1. Always use semantic HTML elements (h1-h6, p) for automatic font application
-2. Use utility classes sparingly - prefer semantic styling
-3. Maintain consistent font weights across similar elements
-4. Ensure sufficient contrast with background colors
-5. Test readability across different screen sizes
+2. Leverage the enhanced spacing system for consistent layouts
+3. Use the modern button and card classes for cohesive UI design
+4. Apply responsive considerations - typography scales on mobile
+5. Maintain visual hierarchy with the enhanced font weight system
+6. Test interactive elements for smooth animations and accessibility
 
 ## File Locations
 

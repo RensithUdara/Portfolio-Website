@@ -160,35 +160,47 @@
     letter-spacing: -0.015em;
   }
 
-  /* Increased heading sizes across the board for better hierarchy */
+  /* Enhanced heading sizes with improved visual hierarchy and spacing */
   h1 {
-    font-size: 3.5rem;
-    line-height: 1.2;
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
   }
 
   h2 {
-    font-size: 2.75rem;
-    line-height: 1.3;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
   }
 
   h3 {
-    font-size: 2.25rem;
-    line-height: 1.3;
+    font-size: 2.75rem;
+    line-height: 1.25;
+    margin-bottom: 1rem;
+    font-weight: 700;
   }
 
   h4 {
-    font-size: 1.75rem;
-    line-height: 1.4;
+    font-size: 2.25rem;
+    line-height: 1.3;
+    margin-bottom: 0.875rem;
+    font-weight: 600;
   }
 
   h5 {
-    font-size: 1.375rem;
-    line-height: 1.5;
+    font-size: 1.75rem;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
   }
 
   h6 {
-    font-size: 1.125rem;
-    line-height: 1.5;
+    font-size: 1.375rem;
+    line-height: 1.45;
+    margin-bottom: 0.625rem;
+    font-weight: 600;
   }
 
   p {
@@ -197,13 +209,18 @@
     font-size: 1.125rem;
     line-height: 1.8;
     font-weight: 400;
+    margin-bottom: 1.25rem;
+    color: oklch(0.25 0.01 260);
   }
 
-  /* Font styles for interactive elements */
+  /* Enhanced interactive elements with modern styling */
   button {
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
     font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.025em;
   }
 
   input,
@@ -238,7 +255,7 @@
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   }
 
-  /* Increased text sizes for common Tailwind utilities */
+  /* Enhanced text sizes matching new heading hierarchy */
   .text-sm {
     font-size: 1rem;
   }
@@ -248,31 +265,39 @@
   }
 
   .text-lg {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .text-xl {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   .text-2xl {
-    font-size: 1.875rem;
+    font-size: 2rem;
   }
 
   .text-3xl {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
   }
 
   .text-4xl {
-    font-size: 2.75rem;
+    font-size: 3.25rem;
   }
 
   .text-5xl {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .text-6xl {
-    font-size: 4.25rem;
+    font-size: 5rem;
+  }
+
+  .text-7xl {
+    font-size: 6rem;
+  }
+
+  .text-8xl {
+    font-size: 7.5rem;
   }
 
   /* Font family utilities for easy application */
@@ -290,6 +315,126 @@
   .font-nav {
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-weight: 600;
+  }
+
+  /* Modern UI Design Enhancements */
+
+  /* Enhanced Card Styles */
+  .card-enhanced {
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+  }
+
+  .card-enhanced:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Modern Button Styles */
+  .btn-primary {
+    background: linear-gradient(135deg, oklch(0.48 0.22 265) 0%, oklch(0.55 0.24 270) 100%);
+    color: oklch(0.98 0.005 80);
+    padding: 0.875rem 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px 0 rgba(0, 118, 255, 0.5);
+  }
+
+  .btn-secondary {
+    background: oklch(0.92 0.02 280);
+    color: oklch(0.15 0.01 260);
+    padding: 0.875rem 2rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+  }
+
+  .btn-secondary:hover {
+    background: oklch(0.88 0.02 280);
+    transform: translateY(-1px);
+    border-color: oklch(0.48 0.22 265);
+  }
+
+  /* Enhanced Typography Spacing */
+  .section-spacing {
+    margin-bottom: 5rem;
+  }
+
+  .content-spacing>*+* {
+    margin-top: 1.5rem;
+  }
+
+  /* Modern Input Styles */
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: oklch(0.48 0.22 265);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Responsive Typography - Mobile Optimizations */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      line-height: 1.25;
+    }
+
+    h3 {
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    h4 {
+      font-size: 1.75rem;
+      line-height: 1.35;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    h6 {
+      font-size: 1.25rem;
+      line-height: 1.45;
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+  }
+
+  /* Enhanced Visual Hierarchy */
+  .text-gradient {
+    background: linear-gradient(135deg, oklch(0.48 0.22 265), oklch(0.68 0.26 40));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
 
