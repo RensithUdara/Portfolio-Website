@@ -274,10 +274,10 @@ export default function HomePage() {
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Our expert gemologists are here to help you discover the perfect Ceylon gemstone for your collection or custom jewelry project.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300"
                 asChild
               >
@@ -285,10 +285,10 @@ export default function HomePage() {
                   Browse Our Collection <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              
-              <Button 
-                size="lg" 
-                variant="outline" 
+
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-2 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg"
                 asChild
               >
@@ -309,7 +309,7 @@ export default function HomePage() {
                   </div>
                   <p className="text-slate-300">+94 91 438 3324</p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center justify-center">
                     <Mail className="h-6 w-6 text-blue-400 mr-3" />
@@ -317,7 +317,7 @@ export default function HomePage() {
                   </div>
                   <p className="text-slate-300">info@ceylexgems.com</p>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex items-center justify-center">
                     <MessageCircle className="h-6 w-6 text-blue-400 mr-3" />
@@ -330,15 +330,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-    </div>
-  </section>
+    </CardContent>
+          </Card >
+        ))
+}
+      </div >
+    </div >
+  </section >
 
   {/* Certification Section - White Background */ }
-  <section className="bg-gradient-to-br from-gray-50 to-white py-20">
+  < section className = "bg-gradient-to-br from-gray-50 to-white py-20" >
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div className="order-2 lg:order-1 animate-fade-in">
@@ -427,10 +428,10 @@ export default function HomePage() {
         </div>
       </div>
     </div>
-  </section>
+  </section >
 
   {/* CTA Section - Enhanced blue gradient background */ }
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#1e3a8a] via-[#3b82f6] to-[#60a5fa] py-24">
+  < section className = "relative overflow-hidden bg-gradient-to-br from-[#1e3a8a] via-[#3b82f6] to-[#60a5fa] py-24" >
         <div
           className="absolute inset-0 opacity-20"
           style={{
@@ -538,9 +539,9 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
-      <Footer />
+  <Footer />
     </div >
   )
 }
