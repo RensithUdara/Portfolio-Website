@@ -225,17 +225,17 @@
   /* Special styling for navigation and menu items */
   nav,
   .nav-item {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
-    font-weight: 500;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
   }
 
   /* Ensure all text elements inherit proper fonts */
   .text-serif {
-    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   }
 
   .text-sans {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
   }
 
   /* Increased text sizes for common Tailwind utilities */
@@ -277,19 +277,19 @@
 
   /* Font family utilities for easy application */
   .font-heading {
-    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
-    font-weight: 600;
-    letter-spacing: -0.025em;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.015em;
   }
 
   .font-body {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-weight: 400;
   }
 
   .font-nav {
-    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
-    font-weight: 500;
+    font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
+    font-weight: 600;
   }
 }
 
