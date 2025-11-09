@@ -213,11 +213,14 @@
     color: oklch(0.25 0.01 260);
   }
 
-  /* Font styles for interactive elements */
+  /* Enhanced interactive elements with modern styling */
   button {
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
     font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.025em;
   }
 
   input,
