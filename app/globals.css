@@ -318,7 +318,7 @@
   }
 
   /* Modern UI Design Enhancements */
-  
+
   /* Enhanced Card Styles */
   .card-enhanced {
     border-radius: 1rem;
@@ -369,7 +369,7 @@
     margin-bottom: 5rem;
   }
 
-  .content-spacing > * + * {
+  .content-spacing>*+* {
     margin-top: 1.5rem;
   }
 
