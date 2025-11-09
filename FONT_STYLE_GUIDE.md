@@ -90,12 +90,13 @@ const nunito = Nunito({
 
 ## Brand Alignment
 
-The typography choices align with CeyLex Gems' brand values:
+The typography choice aligns with CeyLex Gems' evolved brand values:
 
-- **Luxury**: Playfair Display conveys elegance and premium quality
-- **Trust**: Lato provides professional, reliable readability
-- **Heritage**: Serif headings honor traditional gemstone craftsmanship
-- **Modern**: Sans-serif body text ensures contemporary accessibility
+- **Approachable**: Nunito's round letterforms create a friendly, welcoming impression
+- **Modern**: Contemporary sans-serif design appeals to current aesthetic trends
+- **Trustworthy**: Clear, readable typography builds confidence and reliability
+- **Accessible**: Excellent readability across all devices and user needs
+- **Distinctive**: Round characteristics create memorable brand personality
 
 ## Best Practices
 
