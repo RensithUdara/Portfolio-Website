@@ -1,19 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Lato, Playfair_Display } from "next/font/google"
+import { Nunito } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const lato = Lato({
+const nunito = Nunito({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-lato",
-})
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-nunito",
 })
 
 export const metadata: Metadata = {
@@ -47,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} ${playfairDisplay.variable} font-sans antialiased`}>
+      <body className={`${nunito.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
