@@ -3,10 +3,19 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const navLinks = [
     { href: "/shop", label: "Shop" },
@@ -16,7 +25,11 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="absolute top-0 z-50 w-full bg-transparent">
+    <nav
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? "bg-[#0f1729]/95 shadow-lg backdrop-blur-md" : "bg-[#0f1729]/80 backdrop-blur-sm"
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -45,7 +58,7 @@ export function Navigation() {
           {/* Right Side Actions */}
           <div className="flex items-center gap-3">
             <Button
-              className="hidden rounded-lg bg-amber-500 px-6 py-2.5 text-sm font-semibold text-gray-900 shadow-lg transition-all hover:bg-amber-400 hover:shadow-xl sm:inline-flex"
+              className="hidden rounded-lg bg-amber-500 px-6 py-2.5 text-sm font-semibold text-gray-900 shadow-lg transition-all hover:bg-amber-400 hover:shadow-xl hover:scale-105 sm:inline-flex"
               asChild
             >
               <Link href="/shop">Explore Our Collection</Link>
@@ -66,7 +79,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="border-t border-white/10 bg-[#0f1729]/95 py-4 backdrop-blur md:hidden">
+          <div className="border-t border-white/10 bg-[#0f1729]/95 py-4 backdrop-blur md:hidden animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
@@ -80,7 +93,7 @@ export function Navigation() {
               ))}
               <Link
                 href="/shop"
-                className="rounded-lg bg-amber-500 px-4 py-2.5 text-center text-sm font-semibold text-gray-900"
+                className="rounded-lg bg-amber-500 px-4 py-2.5 text-center text-sm font-semibold text-gray-900 hover:bg-amber-400 transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Explore Our Collection
