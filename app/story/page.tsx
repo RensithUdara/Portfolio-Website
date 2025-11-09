@@ -42,14 +42,20 @@ export default function StoryPage() {
       </section>
 
       {/* Sri Lanka's Gem Legacy */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="space-y-6 animate-fade-in-up">
-              <h2 className="font-serif text-3xl font-bold tracking-tight text-balance text-gray-900 sm:text-4xl">
-                Ratna-Dweepa: The Island of Gems
+          <div className="grid items-center gap-16 lg:grid-cols-2">
+            <div className="space-y-8 animate-fade-in-up">
+              <Badge className="border-blue-600 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg">
+                2,500 Years of Heritage
+              </Badge>
+              <h2 className="font-serif text-4xl font-bold tracking-tight text-balance text-gray-900 sm:text-5xl">
+                Ratna-Dweepa: The{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Island of Gems
+                </span>
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
                   For over 2,500 years, Sri Lanka has been renowned as the "Island of Gems" – Ratna-Dweepa in Sanskrit.
                   Our island's geological treasures have adorned royal crowns, legendary collections, and inspired
@@ -68,12 +74,13 @@ export default function StoryPage() {
             </div>
 
             <div className="relative animate-scale-in">
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-2xl opacity-20 animate-pulse-slow" />
               <Image
                 src="/traditional-sri-lankan-gem-mining.jpg"
                 alt="Traditional gem mining in Sri Lanka"
                 width={600}
                 height={600}
-                className="rounded-2xl shadow-2xl transition-transform hover:scale-105"
+                className="relative rounded-2xl shadow-2xl transition-transform hover:scale-105"
               />
             </div>
           </div>
