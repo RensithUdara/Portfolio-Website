@@ -378,9 +378,9 @@
   textarea:focus,
   select:focus {
     outline: none;
-    ring: 2px solid oklch(0.48 0.22 265);
     border-color: oklch(0.48 0.22 265);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
