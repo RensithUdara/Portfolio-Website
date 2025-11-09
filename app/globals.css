@@ -122,10 +122,12 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
-    /* Increased base font size from default 16px to 18px for better readability */
+    @apply bg-background text-foreground font-sans;
+    /* Lato font for all body text - clean, modern, and highly readable */
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
     font-size: 18px;
     line-height: 1.7;
+    font-weight: 400;
   }
 
   html {
@@ -139,7 +141,11 @@
   h5,
   h6 {
     @apply font-serif;
+    /* Playfair Display - Classic, elegant serif perfect for luxury and premium brands */
+    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
     font-feature-settings: "liga" 1, "calt" 1;
+    font-weight: 600;
+    letter-spacing: -0.025em;
   }
 
   /* Increased heading sizes across the board for better hierarchy */
@@ -174,19 +180,50 @@
   }
 
   p {
+    /* Lato for body text - clean, modern, and highly readable */
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
     font-size: 1.125rem;
     line-height: 1.8;
+    font-weight: 400;
   }
 
-  /* Increased button and input text sizes */
+  /* Font styles for interactive elements */
   button {
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
+    font-weight: 500;
   }
 
   input,
   textarea,
   select {
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
     font-size: 1.0625rem;
+    font-weight: 400;
+  }
+
+  /* Ensure consistent font application for common elements */
+  span,
+  div,
+  label,
+  a {
+    font-family: inherit;
+  }
+
+  /* Special styling for navigation and menu items */
+  nav,
+  .nav-item {
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+  }
+
+  /* Ensure all text elements inherit proper fonts */
+  .text-serif {
+    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+  }
+
+  .text-sans {
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
   }
 
   /* Increased text sizes for common Tailwind utilities */
@@ -224,6 +261,23 @@
 
   .text-6xl {
     font-size: 4.25rem;
+  }
+
+  /* Font family utilities for easy application */
+  .font-heading {
+    font-family: var(--font-playfair), "Playfair Display", Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+
+  .font-body {
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+  }
+
+  .font-nav {
+    font-family: var(--font-lato), "Lato", system-ui, -apple-system, sans-serif;
+    font-weight: 500;
   }
 }
 
