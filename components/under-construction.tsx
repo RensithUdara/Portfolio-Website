@@ -53,13 +53,8 @@ export function UnderConstruction({
                             </div>
 
                             <p className="mb-8 text-lg leading-relaxed text-white/90">
-                                We're carefully curating this page to showcase our premium collection of
-                                <span className="font-semibold text-amber-300"> Ceylon gemstones</span>.
-                                Just like how we polish each precious stone to perfection, we're putting the
-                                finishing touches on this experience.
-                            </p>
-
-                            {/* Progress Indicator */}
+                                {message}
+                            </p>                            {/* Progress Indicator */}
                             <div className="mb-8">
                                 <div className="mb-2 flex items-center justify-between text-sm text-white/70">
                                     <span>Progress</span>
