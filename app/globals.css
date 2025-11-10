@@ -4,48 +4,68 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* More vibrant and colorful gemstone-inspired palette */
-  --background: oklch(0.99 0.005 80);
-  --foreground: oklch(0.15 0.01 260);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.15 0.01 260);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.15 0.01 260);
-  --primary: oklch(0.48 0.22 265);
-  /* Vivid sapphire blue */
-  --primary-foreground: oklch(0.98 0.005 80);
-  --secondary: oklch(0.92 0.02 280);
-  --secondary-foreground: oklch(0.15 0.01 260);
-  --muted: oklch(0.96 0.01 280);
-  --muted-foreground: oklch(0.48 0.01 260);
-  --accent: oklch(0.68 0.26 40);
-  /* Bright gold accent */
-  --accent-foreground: oklch(0.12 0.02 260);
-  --destructive: oklch(0.55 0.32 25);
-  /* Vibrant ruby red */
-  --destructive-foreground: oklch(0.98 0.005 80);
-  --border: oklch(0.88 0.02 280);
-  --input: oklch(0.88 0.02 280);
-  --ring: oklch(0.48 0.22 265);
-  --chart-1: oklch(0.48 0.22 265);
-  /* Sapphire blue */
-  --chart-2: oklch(0.65 0.26 40);
-  /* Rich gold */
-  --chart-3: oklch(0.52 0.2 160);
-  /* Emerald green */
-  --chart-4: oklch(0.55 0.32 25);
-  /* Ruby red */
-  --chart-5: oklch(0.42 0.18 310);
-  /* Amethyst purple */
-  --radius: 0.75rem;
-  --sidebar: oklch(0.99 0.005 80);
-  --sidebar-foreground: oklch(0.15 0.01 260);
-  --sidebar-primary: oklch(0.48 0.22 265);
-  --sidebar-primary-foreground: oklch(0.98 0.005 80);
-  --sidebar-accent: oklch(0.92 0.02 280);
-  --sidebar-accent-foreground: oklch(0.15 0.01 260);
-  --sidebar-border: oklch(0.88 0.02 280);
-  --sidebar-ring: oklch(0.48 0.22 265);
+  /* Modern luxury gemstone palette */
+  --background: 252 252 254;
+  --foreground: 12 16 35;
+  --card: 255 255 255;
+  --card-foreground: 12 16 35;
+  --popover: 255 255 255;
+  --popover-foreground: 12 16 35;
+
+  /* Primary - Deep Sapphire Blue */
+  --primary: 20 66 142;
+  --primary-foreground: 248 250 252;
+
+  /* Secondary - Sophisticated Gray */
+  --secondary: 241 245 249;
+  --secondary-foreground: 51 65 85;
+
+  /* Muted tones */
+  --muted: 248 250 252;
+  --muted-foreground: 100 116 139;
+
+  /* Accent - Luxurious Gold */
+  --accent: 234 179 8;
+  --accent-foreground: 12 16 35;
+
+  /* Destructive - Ruby Red */
+  --destructive: 220 38 38;
+  --destructive-foreground: 248 250 252;
+
+  /* Borders and inputs */
+  --border: 226 232 240;
+  --input: 226 232 240;
+  --ring: 20 66 142;
+
+  /* Chart colors - Premium gemstone palette */
+  --chart-1: 20 66 142;
+  /* Sapphire Blue */
+  --chart-2: 234 179 8;
+  /* Gold */
+  --chart-3: 21 128 61;
+  /* Emerald Green */
+  --chart-4: 220 38 38;
+  /* Ruby Red */
+  --chart-5: 147 51 234;
+  /* Amethyst Purple */
+
+  /* Border radius for modern look */
+  --radius: 12px;
+
+  /* Sidebar colors */
+  --sidebar: 255 255 255;
+  --sidebar-foreground: 12 16 35;
+  --sidebar-primary: 20 66 142;
+  --sidebar-primary-foreground: 248 250 252;
+  --sidebar-accent: 241 245 249;
+  --sidebar-accent-foreground: 51 65 85;
+  --sidebar-border: 226 232 240;
+  --sidebar-ring: 20 66 142;
+
+  /* Custom gradient variables */
+  --gradient-primary: linear-gradient(135deg, rgb(20 66 142) 0%, rgb(37 99 235) 100%);
+  --gradient-accent: linear-gradient(135deg, rgb(234 179 8) 0%, rgb(251 191 36) 100%);
+  --gradient-hero: linear-gradient(135deg, rgb(15 23 42) 0%, rgb(30 41 59) 50%, rgb(51 65 85) 100%);
 }
 
 .dark {
@@ -86,60 +106,23 @@
   --sidebar-ring: oklch(0.62 0.24 265);
 }
 
-@theme inline {
-  --font-sans: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
-  --font-serif: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, "SF Mono", Monaco, "Cascadia Code", "Segoe UI Mono", monospace;
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
+/* Removed problematic @theme directive for compatibility */
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring) / 0.5);
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    /* Nunito - Modern round font for all text - friendly, approachable, and highly readable */
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.65;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -152,34 +135,37 @@
   h4,
   h5,
   h6 {
-    @apply font-sans;
-    /* Nunito - Modern round font for headings - friendly, approachable, and contemporary */
     font-family: var(--font-nunito), "Nunito", system-ui, -apple-system, sans-serif;
     font-feature-settings: "liga" 1, "calt" 1;
     font-weight: 700;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
   }
 
-  /* Enhanced heading sizes with improved visual hierarchy and spacing */
+  /* Modern heading hierarchy with improved spacing */
   h1 {
-    font-size: 4.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     line-height: 1.2;
     margin-bottom: 1.25rem;
     font-weight: 700;
   }
 
   h3 {
-    font-size: 2.75rem;
-    line-height: 1.25;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    line-height: 1.3;
     margin-bottom: 1rem;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   h4 {
@@ -383,59 +369,144 @@
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Responsive Typography - Mobile Optimizations */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 3rem;
-      line-height: 1.15;
+  /* Modern Gradient Utilities */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Glass morphism effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Modern animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
 
-    h2 {
-      font-size: 2.5rem;
-      line-height: 1.25;
-    }
-
-    h3 {
-      font-size: 2rem;
-      line-height: 1.3;
-    }
-
-    h4 {
-      font-size: 1.75rem;
-      line-height: 1.35;
-    }
-
-    h5 {
-      font-size: 1.5rem;
-      line-height: 1.4;
-    }
-
-    h6 {
-      font-size: 1.25rem;
-      line-height: 1.45;
-    }
-
-    body {
-      font-size: 16px;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.7;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
-  /* Enhanced Visual Hierarchy */
-  .text-gradient {
-    background: linear-gradient(135deg, oklch(0.48 0.22 265), oklch(0.68 0.26 40));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 
-  .text-shadow {
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
   }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-fade-in-scale {
+    animation: fadeInScale 0.4s ease-out;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent);
+    background-size: 200px 100%;
+  }
+
+  /* Smooth scroll improvements */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+/* Responsive Typography - Mobile Optimizations */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    line-height: 1.35;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  h6 {
+    font-size: 1.25rem;
+    line-height: 1.45;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Enhanced Visual Hierarchy */
+.text-gradient {
+  background: linear-gradient(135deg, oklch(0.48 0.22 265), oklch(0.68 0.26 40));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 @layer utilities {
