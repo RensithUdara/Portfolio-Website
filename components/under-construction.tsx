@@ -44,10 +44,10 @@ export function UnderConstruction({
                                 </div>
                             </div>
 
-              {/* Main Message */}
-              <h1 className="mb-4 bg-linear-to-r from-white to-amber-200 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
-                {title}
-              </h1>                            <div className="mb-6 flex items-center justify-center gap-2 text-amber-400">
+                            {/* Main Message */}
+                            <h1 className="mb-4 bg-linear-to-r from-white to-amber-200 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+                                {title}
+                            </h1>                            <div className="mb-6 flex items-center justify-center gap-2 text-amber-400">
                                 <Settings className="h-5 w-5 animate-spin" />
                                 <span className="text-lg font-medium">Crafting Something Beautiful</span>
                             </div>
