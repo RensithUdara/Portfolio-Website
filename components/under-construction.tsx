@@ -55,15 +55,20 @@ export function UnderConstruction({
                             <p className="mb-8 text-lg leading-relaxed text-white/90">
                                 {message}
                             </p>                            {/* Progress Indicator */}
-                            <div className="mb-8">
-                                <div className="mb-2 flex items-center justify-between text-sm text-white/70">
-                                    <span>Progress</span>
-                                    <span>75%</span>
+                            {showProgress && (
+                                <div className="mb-8">
+                                    <div className="mb-2 flex items-center justify-between text-sm text-white/70">
+                                        <span>Progress</span>
+                                        <span>{progressPercentage}%</span>
+                                    </div>
+                                    <div className="h-2 overflow-hidden rounded-full bg-white/20">
+                                        <div 
+                                            className="h-full animate-pulse bg-linear-to-r from-amber-500 to-amber-400 transition-all duration-1000"
+                                            style={{ width: `${progressPercentage}%` }}
+                                        ></div>
+                                    </div>
                                 </div>
-                                <div className="h-2 overflow-hidden rounded-full bg-white/20">
-                                    <div className="h-full w-3/4 animate-pulse bg-linear-to-r from-amber-500 to-amber-400 transition-all duration-1000"></div>
-                                </div>
-                            </div>
+                            )}
 
                             {/* Estimated Completion */}
                             <div className="mb-8 rounded-lg border border-amber-500/20 bg-amber-500/10 p-4">
