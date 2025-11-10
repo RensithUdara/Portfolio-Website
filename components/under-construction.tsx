@@ -62,7 +62,7 @@ export function UnderConstruction({
                                         <span>{progressPercentage}%</span>
                                     </div>
                                     <div className="h-2 overflow-hidden rounded-full bg-white/20">
-                                        <div 
+                                        <div
                                             className="h-full animate-pulse bg-linear-to-r from-amber-500 to-amber-400 transition-all duration-1000"
                                             style={{ width: `${progressPercentage}%` }}
                                         ></div>
@@ -74,7 +74,7 @@ export function UnderConstruction({
                             <div className="mb-8 rounded-lg border border-amber-500/20 bg-amber-500/10 p-4">
                                 <div className="flex items-center justify-center gap-2 text-amber-300">
                                     <Clock className="h-5 w-5" />
-                                    <span className="font-medium">Expected Launch: Coming Soon</span>
+                                    <span className="font-medium">Expected Launch: {estimatedCompletion}</span>
                                 </div>
                             </div>
 
@@ -131,7 +131,7 @@ export function UnderConstruction({
                 </div>
             </main>
 
-            <Footer />
+            {showFooter && <Footer />}
         </div>
     )
 }
