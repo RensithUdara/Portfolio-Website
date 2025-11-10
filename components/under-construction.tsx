@@ -8,27 +8,27 @@ import { ArrowLeft, Settings, Gem, Clock, Mail } from "lucide-react"
 import Link from "next/link"
 
 interface UnderConstructionProps {
-  title?: string
-  message?: string
-  showProgress?: boolean
-  progressPercentage?: number
-  estimatedCompletion?: string
-  showNavigation?: boolean
-  showFooter?: boolean
+    title?: string
+    message?: string
+    showProgress?: boolean
+    progressPercentage?: number
+    estimatedCompletion?: string
+    showNavigation?: boolean
+    showFooter?: boolean
 }
 
 export function UnderConstruction({
-  title = "Under Construction",
-  message = "We're carefully curating this page to showcase our premium collection of Ceylon gemstones. Just like how we polish each precious stone to perfection, we're putting the finishing touches on this experience.",
-  showProgress = true,
-  progressPercentage = 75,
-  estimatedCompletion = "Coming Soon",
-  showNavigation = true,
-  showFooter = true,
+    title = "Under Construction",
+    message = "We're carefully curating this page to showcase our premium collection of Ceylon gemstones. Just like how we polish each precious stone to perfection, we're putting the finishing touches on this experience.",
+    showProgress = true,
+    progressPercentage = 75,
+    estimatedCompletion = "Coming Soon",
+    showNavigation = true,
+    showFooter = true,
 }: UnderConstructionProps = {}) {
-  return (
-    <div className="min-h-screen bg-linear-to-br from-[#1a2557] via-[#243370] to-[#2d3f8f]">
-      {showNavigation && <Navigation />}            <main className="flex min-h-screen items-center justify-center px-4 pt-20">
+    return (
+        <div className="min-h-screen bg-linear-to-br from-[#1a2557] via-[#243370] to-[#2d3f8f]">
+            {showNavigation && <Navigation />}            <main className="flex min-h-screen items-center justify-center px-4 pt-20">
                 <div className="w-full max-w-2xl text-center">
                     <Card className="border-amber-500/20 bg-white/10 backdrop-blur-md shadow-2xl">
                         <CardContent className="p-12">
